@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WP Forge Companion</title>
+<link rel="icon" href="logo.png">
+<meta name="description" content="WP Forge Companion is a small WordPress plugin that lets your website maintainer test updates on a private copy of your site before they reach it.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1d1b18;
+    --muted: #5f5a52;
+    --line: #e7e2d9;
+    --accent: #c2410c;
+    --accent-soft: #fff1e8;
+    --ok: #15803d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141311;
+      --surface: #1c1a17;
+      --text: #f1ede6;
+      --muted: #aaa398;
+      --line: #2e2b26;
+      --accent: #fb923c;
+      --accent-soft: #2a1d14;
+      --ok: #4ade80;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 64px 0 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--accent); font-weight: 700; letter-spacing: .02em; font-size: 15px; text-transform: uppercase; }
+  .brand img { width: 44px; height: 44px; }
+  h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.15; margin: 18px 0 16px; letter-spacing: -.02em; }
+  .lead { font-size: 20px; color: var(--muted); margin: 0; max-width: 620px; }
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 24px; margin: 0 0 18px; letter-spacing: -.01em; }
+  p { margin: 0 0 14px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 6px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 16px; }
+  .card h3 { font-size: 17px; margin: 0 0 6px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  ul.checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  ul.checks li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; }
+  ul.checks svg { width: 22px; height: 22px; margin-top: 3px; color: var(--ok); }
+  ul.checks strong { display: block; }
+  ul.checks span { color: var(--muted); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+  .steps li::before { content: counter(step); width: 30px; height: 30px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; display: grid; place-items: center; font-size: 15px; }
+  .note { background: var(--accent-soft); border-radius: 12px; padding: 18px 20px; }
+  .note p:last-child { margin-bottom: 0; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 56px; color: var(--muted); font-size: 14.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="" width="44" height="44">
+      WP Forge Companion
+    </div>
+    <h1>Safer updates for your WordPress site</h1>
+    <p class="lead">WP Forge Companion is a small plugin your website maintainer installs so they can keep your site up to date without putting it at risk. Every update is tried on a private copy of your site first, and only what works reaches your real site.</p>
+  </header>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="cards">
+      <div class="card"><h3>Tests updates first</h3><p>Your maintainer makes a private copy of your site and tries each update there before anything changes for your visitors.</p></div>
+      <div class="card"><h3>Keeps restore points</h3><p>Before any change, your site is saved, so it can be put back exactly as it was in one step.</p></div>
+      <div class="card"><h3>Changes only what passed</h3><p>Only the updates that were tested and worked are applied to your real site, and nothing else is touched.</p></div>
+      <div class="card"><h3>Keeps a way in</h3><p>If another plugin ever breaks your site, your maintainer can still reach it and fix it quickly.</p></div>
+      <div class="card"><h3>Reports on site health</h3><p>Your maintainer can see a read-only summary of your site's health and what needs updating.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why it is safe to have on your site</h2>
+    <ul class="checks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><strong>It only answers your maintainer.</strong><span>Every request must carry your maintainer's private signature. Anything else is turned away.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><strong>It never contacts anyone on its own.</strong><span>No tracking, no advertising, no outside services. It sends nothing anywhere by itself.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><strong>It needs no passwords.</strong><span>It does not use or store anyone's WordPress login.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><strong>Your visitors won't notice it.</strong><span>It doesn't change how your site looks or works, and there is nothing for you to set up.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><strong>It removes itself cleanly.</strong><span>If it is deleted, it takes its settings and temporary files with it.</span></div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How an update works</h2>
+    <ol class="steps">
+      <li><div>Your maintainer makes a private copy of your site.</div></li>
+      <li><div>The updates are installed on that copy and its pages are checked.</div></li>
+      <li><div>A restore point of your real site is saved.</div></li>
+      <li><div>Only the changes that passed are applied to your real site. While they go in, visitors may briefly see a short maintenance message.</div></li>
+      <li><div>If anything looks wrong afterwards, your site can be put back as it was.</div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>About your site's data</h2>
+    <div class="note">
+      <p>To test updates, a copy of your site is kept by your website maintainer, on their own computer. WP Forge has no online service that your site is uploaded to, and the copy is not shared with anyone else.</p>
+      <p>If you have any questions about your site or this plugin, please contact your website maintainer.</p>
+    </div>
+  </section>
+
+  <footer>
+    WP Forge Companion is free software, licensed under the GNU General Public License version 2 or later.
+  </footer>
+</div>
+</body>
+</html>
