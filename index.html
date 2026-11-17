@@ -48,6 +48,8 @@
   p { margin: 0 0 14px; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 6px; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 16px; }
+  .card-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; margin-bottom: 12px; }
+  .card-icon svg { width: 22px; height: 22px; stroke-width: 2.3; }
   .card h3 { font-size: 17px; margin: 0 0 6px; }
   .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
   ul.checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
@@ -77,12 +79,12 @@
   <section>
     <h2>What it does</h2>
     <div class="cards">
-      <div class="card"><h3>Tests updates first</h3><p>Your maintainer makes a private copy of your site and tries each update there before anything changes for your visitors.</p></div>
-      <div class="card"><h3>Keeps restore points</h3><p>Before any change, your site is saved, so it can be put back exactly as it was in one step.</p></div>
-      <div class="card"><h3>Changes only what passed</h3><p>Only the updates that were tested and worked are applied to your real site, and nothing else is touched.</p></div>
-      <div class="card"><h3>Keeps a way in</h3><p>If another plugin ever breaks your site, your maintainer can still reach it and fix it quickly.</p></div>
-      <div class="card"><h3>Reports on site health</h3><p>Your maintainer can see a read-only summary of your site's health and what needs updating.</p></div>
-      <div class="card"><h3>Faster than the usual way</h3><p>Only what changed is copied or applied, never the whole site over again. A routine update takes minutes, and the maintenance message shows only briefly.</p></div>
+      <div class="card"><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></div><h3>Tests updates first</h3><p>Your maintainer makes a private copy of your site and tries each update there before anything changes for your visitors.</p></div>
+      <div class="card"><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></div><h3>Keeps restore points</h3><p>Before any change, your site is saved, so it can be put back exactly as it was in one step.</p></div>
+      <div class="card"><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5"/></svg></div><h3>Changes only what passed</h3><p>Only the updates that were tested and worked are applied to your real site, and nothing else is touched.</p></div>
+      <div class="card"><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.6-1.7"/></svg></div><h3>Keeps a way in</h3><p>If another plugin ever breaks your site, your maintainer can still reach it and fix it quickly.</p></div>
+      <div class="card"><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><h3>Reports on site health</h3><p>Your maintainer can see a read-only summary of your site's health and what needs updating.</p></div>
+      <div class="card"><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 17a9 9 0 1 1 17 0"/><path d="M12 14l4-4"/><circle cx="12" cy="14" r="1"/></svg></div><h3>Faster than the usual way</h3><p>Only what changed is copied or applied, never the whole site over again. A routine update takes minutes, and the maintenance message shows only briefly.</p></div>
     </div>
   </section>
 
